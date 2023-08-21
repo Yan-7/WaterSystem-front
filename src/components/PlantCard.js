@@ -1,4 +1,6 @@
 import React from 'react';
+import './PlantCard.css';
+
 
 function PlantCard({ plant }) {
     return (

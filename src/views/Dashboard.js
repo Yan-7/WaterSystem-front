@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PlantCard from '../components/PlantCard';
+import { fetchPlants } from '../services/api';
+import './Dashboard.css';
 
 function Dashboard() {
-    // Sample data for demonstration
-    const plants = [
-        { id: 1, lastWateredTime: '2023-08-20 10:00 AM', status: 'Healthy' },
-        { id: 2, lastWateredTime: '2023-08-20 09:45 AM', status: 'Healthy' },
-        // ... more plants
-    ];
+    const [plants, setPlants] = useState([]);
+
+    useEffect(() => {
+        async function loadPlants() {
+            try {
+                const data = await fetchPlants();
+                setPlants(data);
+            } catch (error) {
+                console.error("Error loading plants:", error);
+            }
+        }
+
+        loadPlants();
+    }, []);
 
     return (
         <div>
