@@ -19,3 +19,8 @@
 .plant-card button:hover {
     background-color: #45a049;
 }
+
+.plant-card img {
+    width: 200px; /* or any other size */
+    height: auto;
+}

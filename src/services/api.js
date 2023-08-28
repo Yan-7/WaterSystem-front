@@ -14,4 +14,15 @@ export const fetchPlants = async () => {
     }
 };
 
+export const updatePlant = async(plantId, updatedPlant) => {
+    try {
+        const response = await api.put(`/plants/${plantId}`, updatedPlant);
+        return response.data;
+    } catch (error) {
+        console.log("problem updatind plant", error);
+        throw error;
+        
+    }
+}
+
 export default api;
