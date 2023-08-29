@@ -1,6 +1,27 @@
-.plant-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.dashboard {
     padding: 20px;
 }
+
+.dashboard-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.plant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.dashboard {
+    padding: 20px;
+    background: linear-gradient(45deg, #2196F3 30%, #21CBF3 90%);
+}
+.maps-container {
+    display: flex; /* Use Flexbox to align children horizontally */
+    justify-content: space-between; /* Distribute children with space between them */
+    margin-bottom: 20px; /* Optional: Add some margin to separate from the rest of the content */
+  }

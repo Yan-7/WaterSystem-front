@@ -1,0 +1,84 @@
+.field-map {
+    
+    justify-content: center;  /* Horizontally center the items */
+    align-items: center;      /* Vertically center the items */
+    height: auto;            
+}
+
+.plant-square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+}
+
+  
+
+.plant-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+#sendWater {
+    transition: background-color 0.3s ease;
+  }
+.plant-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+#sendWater:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+.plant-card-content {
+    padding: 20px;
+}
+
+.plant-card-content p {
+    margin: 10px 0;
+}
+
+.plant-card-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.plant-card-content button:hover {
+    background-color: #45a049;
+}
+
+
+
+.plant-card img {
+    width: 200px; /* or any other size */
+    height: auto;
+}
+
+.dashboard {
+    padding: 20px;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+  
+  .loading, .error {
+    padding: 20px;
+    font-size: 18px;
+  }
+  

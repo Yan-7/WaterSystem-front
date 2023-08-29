@@ -1,0 +1,22 @@
+.field-map-contamination {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+.plant-square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.field-map-header {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some margin to separate it from the rest */
+}
