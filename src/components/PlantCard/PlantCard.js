@@ -20,7 +20,24 @@ function PlantCard({ plant }) {
     setCurrentImage(imageArray[nextIndex]);
   };
 
+  async function reduceContamination() {
+    try {
+      const updatedPlant = {
+        ...plant,
+        contamination: Math.max(0, plant.contamination - 200),  // Reduce contamination
+      };
+      await updatePlant(plant.plantId, updatedPlant);  // Corrected this line
+      console.log('Plant updated successfully: ' + updatedPlant.contamination);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const handleWaterNow = async () => {
+    if (plant.contamination > 800) {
+      alert('water contamination !!!! cannot open water')
+      return
+    }
     try {
       const updatedPlant = {
         ...plant,
@@ -59,14 +76,16 @@ function PlantCard({ plant }) {
 
   return (
     <div className="plant-card">
+      <h2>Plant {plant.plantId}</h2>
       <img src={currentImage} alt="Plant" />
       <button onClick={changeImage}>Change Image</button>
       <div className="plant-card-content">
-        <h2>Plant {plant.plantId}</h2>
+        
         <p>Last Watered: {formattedDate} {formattedTime}</p>
         <p style={{ backgroundColor: getStatusColor() }}>Irrigation Status {plant.status}</p>
         <p style={{ backgroundColor: getContaminationStatus() }}>Contamination Status {contamination}</p>
         <button id="sendWater" onClick={handleWaterNow}>Water Now</button>
+        <button onClick={reduceContamination}> reduce contamination</button>
       </div>
     </div>
   );

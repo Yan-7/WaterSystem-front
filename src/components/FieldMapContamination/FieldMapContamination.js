@@ -3,9 +3,9 @@ import './FieldMapContamination.css'; // Reusing the same CSS as FieldMap.js
 
 function FieldMapContamination({ plants }) {
   const getContaminationColor = (contamination) => {
-    if (contamination > 80) {
+    if (contamination > 800) {
       return 'red';
-    } else if (contamination > 40 && contamination <= 80) {
+    } else if (contamination > 400 && contamination <= 800) {
       return 'orange';
     }
     return 'green';
